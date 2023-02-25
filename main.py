@@ -4,7 +4,7 @@
 
 import random
 cash_n = int(input("Количество монет на столе: "))
-nam_cash = [random.randint(0, 1) for i in range (cash_n)]
+nam_cash = [random.randint(0, 1) for i in range(cash_n)]
 
 print(nam_cash)
 
@@ -16,7 +16,5 @@ for i in range(cash_n):
     else:
         orl_1 += 1
 print(f"В настоящий момент на столе лежит {resh_0} монет с решко и {orl_1} монет с гербом")
-if resh_0 > orl_1:
-    print(f"Необходимо перевернуть {orl_1} монет")
-else:
-    print(f"Необходимо перевернуть {resh_0} монет")
+
+print(f"Необходимо перевернуть {orl_1} монет" if resh_0 > orl_1 else f"Необходимо перевернуть {resh_0} монет")
